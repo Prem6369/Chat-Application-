@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiSignalRClient.MainPage">
+
+
+    <VerticalStackLayout>
+        <Label x:Name="conncetionid" FontSize="18"/>
+
+        <Label Text="Username" FontAttributes="Bold" Margin="5"/>
+
+        <Entry Placeholder="Enter user name"  TextColor="Black" x:Name="txtUsername"/>
+        
+        <Label Text="Message" FontAttributes="Bold" Margin="5"/>
+
+        <Entry Placeholder="Enter message "  TextColor="Black" x:Name="txtMessage"/>
+
+        <Label Text="RecevierId" FontAttributes="Bold" Margin="5"/>
+
+        <Entry Placeholder="Enter Recevierid "  TextColor="Black" x:Name="txtRecevierid"/>
+
+
+        <Grid RowDefinitions="Auto">
+            <ScrollView>
+                <StackLayout  x:Name="lblChat"  Orientation="Vertical" BackgroundColor= "AntiqueWhite"></StackLayout>
+            </ScrollView>
+        </Grid>
+
+        <Button
+            Text="SendMessage"
+            FontAttributes="Bold"
+            x:Name="Sendbtn"
+            Clicked="Sendbtn_Clicked"
+            BackgroundColor="ForestGreen"
+            HorizontalOptions="End"/>
+        
+    </VerticalStackLayout>
+
+</ContentPage>
